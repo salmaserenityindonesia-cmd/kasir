@@ -1,0 +1,348 @@
+/* Fonts are loaded locally via local-fonts.css in header.php */
+
+:root {
+    --stitch-primary: #4285F4;
+    --stitch-secondary: #34A853;
+    --stitch-bg: rgba(255, 255, 255, 0.95);
+    --stitch-text: #202124;
+    --stitch-text-secondary: #5f6368;
+    --stitch-hover-bg: rgba(66, 133, 244, 0.08); /* Light blue hover */
+    --stitch-active-bg: rgba(66, 133, 244, 0.12);
+    --stitch-active-text: #1967d2;
+    --stitch-navbar-height: 80px;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f1f3f4;
+    padding-top: 140px; /* Increased to avoid being covered by header */
+}
+
+/* Redesign Topbar - Make it floating or strictly integrated */
+.topbar {
+    background: #ffffff !important;
+    border-bottom: 1px solid #dadce0;
+    color: var(--stitch-text-secondary) !important;
+    font-weight: 500;
+    padding: 6px 0 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1040;
+    min-height: 32px;
+}
+
+.topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.topbar .navbar-center {
+    font-weight: 600;
+    color: var(--stitch-text);
+    letter-spacing: -0.2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+    .topbar .navbar-center {
+        display: none; /* Hide company name on center for small screens to save space */
+    }
+    .topbar .container {
+        padding: 0 15px;
+    }
+}
+
+/* Redesign Navbar - Floating Glassmorphism */
+.navbar-default {
+    background-color: var(--stitch-bg) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    position: fixed;
+    top: 32px;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    min-height: var(--stitch-navbar-height);
+    margin-bottom: 0 !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 26px !important;
+    color: var(--stitch-primary) !important;
+    height: var(--stitch-navbar-height) !important;
+    line-height: var(--stitch-navbar-height) !important;
+    padding: 0 15px !important;
+}
+
+.navbar-nav > li > a {
+    height: var(--stitch-navbar-height);
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px !important;
+    color: var(--stitch-text-secondary) !important;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.2px;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-bottom: 3px solid transparent;
+}
+
+.navbar-nav > li > a .material-symbols-rounded {
+    font-size: 26px;
+    margin-bottom: 6px;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.navbar-nav > li:hover > a {
+    background-color: var(--stitch-hover-bg) !important;
+    color: var(--stitch-primary) !important;
+    transform: translateY(-2px);
+}
+
+.navbar-nav > li.active > a {
+    background-color: var(--stitch-active-bg) !important;
+    color: var(--stitch-primary) !important;
+    border-bottom: 3px solid var(--stitch-primary) !important;
+}
+
+.navbar-nav > li.active > a .material-symbols-rounded {
+    font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Button Modernization */
+.btn {
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    text-transform: none !important;
+    padding: 8px 16px !important;
+    transition: all 0.2s ease !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.btn-sm {
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+}
+
+.btn-success {
+    background-color: var(--stitch-secondary) !important;
+    color: white !important;
+}
+
+.btn-success:hover {
+    background-color: #2d9449 !important;
+    box-shadow: 0 2px 8px rgba(52, 168, 83, 0.4) !important;
+}
+
+.btn-info {
+    background-color: var(--stitch-primary) !important;
+    color: white !important;
+}
+
+.btn-info:hover {
+    background-color: #1a73e8 !important;
+    box-shadow: 0 2px 8px rgba(66, 133, 244, 0.4) !important;
+}
+
+.btn-default {
+    background-color: white !important;
+    border: 1px solid #dadce0 !important;
+    color: var(--stitch-text-secondary) !important;
+}
+
+.btn-default:hover {
+    background-color: var(--stitch-hover-bg) !important;
+    color: var(--stitch-text) !important;
+}
+
+/* Page Structure & Containers */
+#title_bar {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.page-header-stitch {
+    margin-bottom: 24px;
+}
+
+.page-header-stitch h1 {
+    font-weight: 600;
+    color: var(--stitch-text);
+    font-size: 28px;
+    margin: 0;
+}
+
+/* Table Card */
+#table_holder {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+    margin-bottom: 40px;
+}
+
+.bootstrap-table .fixed-table-container {
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.table {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+.table thead th {
+    background-color: #f8f9fa !important;
+    border-bottom: 2px solid #dadce0 !important;
+    color: var(--stitch-text-secondary) !important;
+    font-weight: 600 !important;
+    padding: 12px 16px !important;
+}
+
+.table tbody td {
+    padding: 14px 16px !important;
+    vertical-align: middle !important;
+    border-bottom: 1px solid #f1f3f4 !important;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(66, 133, 244, 0.04) !important;
+}
+
+/* Toolbar modernization */
+#toolbar {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Modal Dialogs */
+.modal-content {
+    border-radius: 20px !important;
+    border: none !important;
+    box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2) !important;
+}
+
+.modal-header {
+    border-bottom: none !important;
+    padding: 24px 24px 10px !important;
+}
+
+.modal-title {
+    font-weight: 600 !important;
+    font-size: 22px !important;
+}
+
+.modal-footer {
+    border-top: none !important;
+    padding: 10px 24px 24px !important;
+}
+
+/* Form Styling */
+.form-control {
+    border-radius: 8px !important;
+    border: 1px solid #dadce0 !important;
+    padding: 10px 12px !important;
+    height: auto !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Dashboard & Cards */
+.stitch-card {
+    background: white;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+    margin-bottom: 24px;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+}
+
+.stitch-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(60,64,67,0.15);
+}
+
+.welcome-banner {
+    border: none !important;
+    color: white;
+}
+
+.form-control:focus {
+    border-color: var(--stitch-primary) !important;
+    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.15) !important;
+}
+
+/* Footer Styling */
+#footer {
+    margin-top: 60px;
+    padding-bottom: 40px;
+    text-align: center;
+    color: var(--stitch-text-secondary);
+    font-size: 13px;
+    border-top: 1px solid #dadce0;
+    padding-top: 24px;
+}
+
+#footer .jumbotron {
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Hide the old SVG icons */
+.navbar .menu-icon img {
+    display: none !important;
+}
+
+/* Wrapper Adjustment */
+.wrapper {
+    margin-top: 0;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav > li > a {
+        padding: 0 10px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 150px; /* Even more padding on mobile for wrapped headers */
+    }
+    .navbar-default {
+        position: fixed; /* Keep it fixed on mobile too for consistency */
+        top: 32px;
+    }
+    .navbar-nav > li > a {
+        flex-direction: row;
+        height: auto;
+        padding: 15px 20px !important;
+        justify-content: flex-start;
+        border-bottom: none;
+        border-left: 4px solid transparent;
+    }
+    .navbar-nav > li > a .material-symbols-rounded {
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+    .navbar-nav > li.active > a {
+        border-left: 4px solid var(--stitch-primary) !important;
+    }
+}

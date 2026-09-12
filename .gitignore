@@ -1,0 +1,11 @@
+.env
+vendor/
+node_modules/
+writable/cache/
+writable/logs/
+writable/session/
+writable/uploads/
+writable/debugbar/
+tests/build/
+.phpunit.result.cache
+.DS_Store

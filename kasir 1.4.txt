@@ -1,0 +1,3 @@
+repair bug saldo di receipt
+hide logo di receipt
+deleta barcode dan ssale id di recept

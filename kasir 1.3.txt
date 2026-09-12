@@ -1,0 +1,1 @@
+customer punya select all pada penerima saldo

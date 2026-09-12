@@ -1,0 +1,12 @@
+tambah nomorktp & saldo di customer
+tampilkan nomorktp & saldo di customer dan struk belanja
+tambah kotak topup saldo di customer
+tambahkan type pembayaran saldo
+tambahkan laporan cashflow saldo
+tambahkan data pelanggan dan saldo pelanggan di invoice
+tambahkan feature untuk tambah saldo 50000 secara massal 
+tambahkan feature untuk membuat laporan apabila riwayat penjualan diedit maupun dihapus
+tambahkan feature untuk membuat penambahan saldo secara masal akan sekaligus mendisabled checkbox untuk ikut dalam penambahan saldo secara masal selanjutnya sampi ganti bulan
+tambahkan feature untuk mengganti nominal tambahan saldo dari default (50000) ke nominal yang lain  
+ganti nomor ktp dengan nrp/nip
+isi data anggota
